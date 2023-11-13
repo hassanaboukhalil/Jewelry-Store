@@ -1,0 +1,10 @@
+body{
+    background-color: #edefee;
+    margin: 3rem 5%;
+}
+
+header img{
+    display: block;
+    margin: auto;
+    max-width: 35%;
+}
