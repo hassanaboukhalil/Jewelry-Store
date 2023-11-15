@@ -8,3 +8,53 @@ header img{
     margin: auto;
     max-width: 35%;
 }
+
+nav{
+    background-color: black;
+    border-radius: 20px;
+    margin: 2.5rem 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li{
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+nav li:hover{
+    background-color: rgb(85, 83, 83);
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+footer div{
+    flex: 1;
+    display: flex;
+}
+
+footer .copyright{
+    justify-content: end;
+    border-top: solid 1px;
+}
+
+footer .copyright p{
+    margin-top: 0;
+}
+
+footer img{
+    width: 20rem;
+}
