@@ -40,17 +40,13 @@ nav ul{
 nav li{
     font-size: var(--text2);
     padding: 0.5rem;
+    color: white;
+    cursor: pointer;
 }
 
 nav li:hover{
     background-color: rgb(85, 83, 83);
 }
-
-nav a{
-    text-decoration: none;
-    color: white;
-}
-
 
 main{
     display: flex;
