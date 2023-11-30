@@ -118,19 +118,51 @@ main{
     object-fit: cover;
 }
 
-.about-section{
+.about-section , .contact-section{
     background-color: #000;
     color: white;
     padding: 3rem;
     display: none;
 }
 
-.about-section h1 {
+.about-section h1 , .contact-section h1  {
     margin-bottom: 4.06rem ;
 }
 
-.about-section p{
+.about-section p , .contact-section p{
     font-size: var(--text2);
+}
+
+.contact-flex-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-flex-div .contact-info{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact-section .icon-info-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edefee;
+    color: black;
+    cursor: pointer;
+}
+
+.contact-section p {
+    padding: 0 4rem;
+    margin: 0.5rem 0;
+}
+
+.contact-section .icon {
+    padding-left: 1rem
 }
 
 footer{
