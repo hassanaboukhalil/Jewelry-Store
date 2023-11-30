@@ -48,6 +48,10 @@ nav li:hover{
     background-color: rgb(85, 83, 83);
 }
 
+#home-nav{
+    color: #99e0ff;
+}
+
 main{
     display: flex;
     flex-direction: column;
