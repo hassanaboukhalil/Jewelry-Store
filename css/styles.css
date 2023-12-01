@@ -169,6 +169,85 @@ main{
     padding-left: 1rem
 }
 
+
+
+
+.products-section{
+    display: none;
+    color: white;
+}
+
+.products-section p{
+    margin: 0;
+    width: fit-content;
+}
+
+.filter-dropdown p,.filter-box p{
+    font-size: var(--text2);
+}
+
+.filter-dropdown{
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}
+
+.filter-box{
+    background-color: black;
+    gap: 1.5rem;
+    width: fit-content;
+    flex-direction: column;
+    padding: 1rem;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+.filter-box fieldset{
+    border: 0;
+}
+
+fieldset p{
+    padding-bottom: 0.5rem;
+}
+
+.checkboxes ,.radio-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.products-section label{
+    font-size: var(--text3);
+}
+
+.products{
+    display: grid;
+    grid-template-areas: 'myArea myArea myArea';
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.card{
+    width: fit-content;
+    background-color: #0C101F;
+    color: white;
+    padding: 0.8rem;
+}
+
+.product-price{
+    font-size: var(--text2);
+    padding-top: 1rem;
+}
+
+
+
 footer{
     display: flex;
     margin-top: 2.5rem;
