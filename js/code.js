@@ -2,11 +2,16 @@ let prom_sec = document.getElementById("prom-sec")
 let info_sec = document.getElementById("info-sec")
 let abt_sec = document.getElementById("abt-sec")
 let cont_sec = document.getElementById("cont-sec");
+let prdts_sec = document.getElementById("prdts-sec");
+// 
 let hm_nav = document.getElementById("home-nav");
 let pdts_nav = document.getElementById("products-nav");
 let cont_nav = document.getElementById("contact-nav");
 let abt_nav = document.getElementById("about-nav");
 let navs = [hm_nav, pdts_nav, cont_nav ,abt_nav]
+//
+let filter_bx = document.getElementById("filter-box");
+filter_bx.style.display = 'none'
 
 
 function show_home(){
@@ -14,11 +19,26 @@ function show_home(){
     info_sec.style.display = 'flex'
     abt_sec.style.display = 'none'
     cont_sec.style.display = 'none'
-    
+    prdts_sec.style.display = 'none'
     for(let i = 0 ; i < navs.length ; i++){
         if(i == 0){
             navs[i].style.color = "#99e0ff";
             continue
+        }
+        navs[i].style.color = "#edefee";
+    }
+}
+
+function show_products(){
+    prom_sec.style.display = "none";
+    info_sec.style.display = "none";
+    abt_sec.style.display = "none";
+    cont_sec.style.display = "none";
+    prdts_sec.style.display = "block";
+    for (let i = 0; i < navs.length; i++) {
+        if (i == 1) {
+            navs[i].style.color = "#99e0ff";
+            continue;
         }
         navs[i].style.color = "#edefee";
     }
@@ -29,6 +49,7 @@ function show_contact() {
     info_sec.style.display = "none";
     abt_sec.style.display = "none";
     cont_sec.style.display = "block";
+    prdts_sec.style.display = "none";
     for (let i = 0; i < navs.length; i++) {
         if (i == 2) {
         navs[i].style.color = "#99e0ff";
@@ -43,6 +64,7 @@ function show_about(){
     info_sec.style.display = 'none'
     abt_sec.style.display = 'block'
     cont_sec.style.display = "none";
+    prdts_sec.style.display = "none";
     for (let i = 0; i < navs.length; i++) {
         if (i == 3) {
             navs[i].style.color = "#99e0ff";
@@ -67,4 +89,13 @@ function to_whatsapp(){
 
 function to_location(){
     window.location.href = "https://maps.app.goo.gl/rhe2unvHArqNKYh38";
+}
+
+function show_filter_box(){
+    if(filter_bx.style.display == 'none'){
+        filter_bx.style.display = "flex";
+    }
+    else{
+        filter_bx.style.display = 'none'
+    }
 }
