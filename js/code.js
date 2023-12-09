@@ -16,6 +16,9 @@ filter_bx.style.display = 'none'
 //
 let radio_btn1 = document.getElementById("low-to-high")
 let radio_btn2 = document.getElementById("high-to-low")
+let check_box1 = document.getElementById("rings")
+let check_box2 = document.getElementById("necklaces")
+let check_box3 = document.getElementById("earrings")
 
 //
 let products_div = document.getElementById("products_div");
@@ -122,31 +125,15 @@ let all_products = [...rings,...necklaces,...earrings]
 
 let products = bubble_sort_products(all_products, "low-to-high") // high-to-low 
 
-// * end of ...
+// *
 
 add_products(products)
 
-// radio_btn1.addEventListener('click', () => {
-//     if(radio_btn1.checked){
-//         //bubble_sort_products(all_products, 'low-to-high')
-//     }
-//     bubble_sort_products(all_products, 'high-to-low')
-// })
-
-// radio_btn2.addEventListener('click', () => {
-//     if(radio_btn1.checked){
-//         bubble_sort_products(all_products, 'high-to-low')
-//     }
-// })
-
-radio_btn1.addEventListener('click', handleRadioChange)
-radio_btn2.addEventListener('click', handleRadioChange)
-
-
-
-
-
-// * debuging
+radio_btn1.addEventListener('click', filterByPrice)
+radio_btn2.addEventListener('click', filterByPrice)
+check_box1.addEventListener('click', filterByCategory)
+check_box2.addEventListener('click', filterByCategory)
+check_box3.addEventListener('click', filterByCategory)
 
 
 // ** functions
@@ -237,16 +224,35 @@ function show_filter_box(){
     }
 }
 
-function handleRadioChange(){
-    let products
+function filterByPrice(){
+    // let products
     if(radio_btn1.checked){
-        products = bubble_sort_products(all_products, "low-to-high")
+        products = bubble_sort_products(products, "low-to-high")
     }
     else{
-        products = bubble_sort_products(all_products, "high-to-low")
+        products = bubble_sort_products(products, "high-to-low")
     }
     products_div.innerHTML = ""
     add_products(products)
+}
+
+function filterByCategory(){
+    products = []
+    if(!check_box1.checked && !check_box2.checked && !check_box3.checked){
+        products = [...rings, ...necklaces, ...earrings]
+    }
+    else{
+        if(check_box1.checked){
+            products = [...rings]
+        }
+        if(check_box2.checked){
+            products = [...products, ...necklaces]
+        }
+        if(check_box3.checked){
+            products = [...products, ...earrings]
+        }
+    }
+    filterByPrice()
 }
 
 function bubble_sort_products(arr, arrangement_way){
