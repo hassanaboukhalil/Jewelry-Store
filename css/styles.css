@@ -158,6 +158,7 @@ main{
     background-color: #edefee;
     color: black;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .contact-section p {
