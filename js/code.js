@@ -22,100 +22,100 @@ let check_box3 = document.getElementById("earrings")
 
 //
 let products_div = document.getElementById("products_div");
-let card, product_img, product_name, product_price;
+let card, div_txts, product_img, product_name, product_price;
 let rings = [
     {
         img: "./images/rings/ring1.png",
-        name: "ring 1",
+        name: "Ring 1 lorem ipsum",
         price: 200
     },
     {
         img: "./images/rings/ring2.png",
-        name: "ring 2",
+        name: "Ring 2 lorem ipsum",
         price: 280
     },
     {
         img: "./images/rings/ring3.png",
-        name: "ring 3",
+        name: "Ring 3 lorem ipsum",
         price: 400
     },
     {
         img: "./images/rings/ring4.png",
-        name: "ring 4",
+        name: "Ring 4 lorem ipsum",
         price: 430
     },
     {
         img: "./images/rings/ring5.png",
-        name: "ring 5",
+        name: "Ring 5 lorem ipsum",
         price: 490
     },
     {
         img: "./images/rings/ring6.png",
-        name: "ring 6",
+        name: "Ring 6 lorem ipsum",
         price: 570
     }
 ];
 let necklaces = [
     {
         img: "./images/necklaces/necklace1.png",
-        name: "necklace 1",
+        name: "Necklace 1 lorem ipsum",
         price: 230
     },
     {
         img: "./images/necklaces/necklace2.png",
-        name: "necklace 2",
+        name: "Necklace 2 lorem ipsum",
         price: 350
     },
     {
         img: "./images/necklaces/necklace3.png",
-        name: "necklace 3",
+        name: "Necklace 3 lorem ipsum",
         price: 420
     },
     {
         img: "./images/necklaces/necklace4.png",
-        name: "necklace 4",
+        name: "Necklace 4 lorem ipsum",
         price: 470
     },
     {
         img: "./images/necklaces/necklace5.png",
-        name: "necklace 5",
+        name: "Necklace 5 lorem ipsum",
         price: 522
     },
     {
         img: "./images/necklaces/necklace6.png",
-        name: "necklace 6",
+        name: "Necklace 6 lorem ipsum",
         price: 650
     }
 ];
 let earrings = [
     {
         img: "./images/earrings/earring1.png",
-        name: "earring 1",
+        name: "Earring 1 lorem ipsum",
         price: 170
     },
     {
         img: "./images/earrings/earring2.png",
-        name: "earring 2",
+        name: "Earring 2 lorem ipsum",
         price: 220
     },
     {
         img: "./images/earrings/earring3.png",
-        name: "earring 3",
+        name: "Earring 3 lorem ipsum",
         price: 340
     },
     {
         img: "./images/earrings/earring4.png",
-        name: "earring 4",
+        name: "Earring 4 lorem ipsum",
         price: 390
     },
     {
         img: "./images/earrings/earring5.png",
-        name: "earring 5",
+        name: "Earring 5 lorem ipsum",
         price: 405
     },
     {
         img: "./images/earrings/earring6.png",
-        name: "earring 6",
+        name: "Earring 6 lorem ipsum",
         price: 435
     }
 ];
@@ -288,10 +288,13 @@ function add_products(products){
     for (let i = 0; i < products.length; i++) {
         card = document.createElement("div");
         product_img = document.createElement("img");
+        div_txts = document.createElement('div')
         product_name = document.createElement("p");
         product_price = document.createElement("p");
         //
         card.classList.add("card");
+        product_img.classList.add("card-img")
+        div_txts.classList.add("card-txts")
         product_name.classList.add("product-name");
         product_price.classList.add("product-price");
         //
@@ -301,8 +304,9 @@ function add_products(products){
         //
         products_div.appendChild(card);
         card.appendChild(product_img);
-        card.appendChild(product_name);
-        card.appendChild(product_price);
+        card.appendChild(div_txts)
+        div_txts.appendChild(product_name)
+        div_txts.appendChild(product_price)
     }
 }
 
