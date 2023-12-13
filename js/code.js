@@ -23,6 +23,10 @@ let check_box3 = document.getElementById("earrings")
 //
 let products_div = document.getElementById("products_div");
 let card, div_txts, product_img, product_name, product_price;
+//
+// * atropos elements
+let atropos_my_atropos, atropos_scale, atropos_rotate, atropos_inner;
+//
 let rings = [
     {
         img: "./images/rings/ring1.png",
@@ -134,6 +138,19 @@ radio_btn2.addEventListener('click', filterByPrice)
 check_box1.addEventListener('click', filterByCategory)
 check_box2.addEventListener('click', filterByCategory)
 check_box3.addEventListener('click', filterByCategory)
+
+// const myAtropos = Atropos({
+//     el: '.my-atropos',
+//     activeOffset: 40,
+//     shadow: false,
+//     highlight: false
+// });
+// const myAtropos2 = Atropos({
+//     el: '.my-atropos2',
+//     activeOffset: 40,
+//     shadow: false,
+//     highlight: false
+// });
 
 
 // ** functions
@@ -286,11 +303,22 @@ function bubble_sort_products(arr, arrangement_way){
 
 function add_products(products){
     for (let i = 0; i < products.length; i++) {
+        //atropos elements created
+        atropos_my_atropos = document.createElement("div")
+        atropos_scale = document.createElement("div")
+        atropos_rotate = document.createElement("div")
+        atropos_inner = document.createElement("div")
+        //
         card = document.createElement("div");
         product_img = document.createElement("img");
         div_txts = document.createElement('div')
         product_name = document.createElement("p");
         product_price = document.createElement("p");
+        //atropos elements classes added
+        atropos_my_atropos.classList.add("atropos","my-atropos")
+        atropos_scale.classList.add("atropos-scale")
+        atropos_rotate.classList.add("atropos-rotate")
+        atropos_inner.classList.add("atropos-inner")
         //
         card.classList.add("card");
         product_img.classList.add("card-img")
@@ -302,11 +330,22 @@ function add_products(products){
         product_name.innerText = products[i].name;
         product_price.innerText = products[i].price + "$";
         //
-        products_div.appendChild(card);
+        products_div.appendChild(atropos_my_atropos)
+        atropos_my_atropos.appendChild(atropos_scale)
+        atropos_scale.appendChild(atropos_rotate)
+        atropos_rotate.appendChild(atropos_inner)
+        atropos_inner.appendChild(card);
         card.appendChild(product_img);
         card.appendChild(div_txts)
         div_txts.appendChild(product_name)
         div_txts.appendChild(product_price)
+
+        const myAtropos = Atropos({
+            el: atropos_my_atropos,
+            activeOffset: 40,
+            // shadow: false,
+            highlight: false
+        });
     }
 }
 
