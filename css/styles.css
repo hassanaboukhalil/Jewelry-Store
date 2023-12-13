@@ -58,6 +58,19 @@ main{
     gap: 1.5rem;
 }
 
+
+/* /  home section  / */
+@media (width <= 992px){
+    .info-section{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .info-article{
+        max-width: unset !important;
+    }
+}
+
 .promotion-section{
     background-image: linear-gradient(#0d141e, #0a121f, #050c12), url("../images/jw.jpg");
     color: white;
@@ -122,6 +135,43 @@ main{
     object-fit: cover;
 }
 
+
+/* /  about section and contact section  / */
+@media (width <= 600px){
+    .contact-section p {
+        padding: 0 !important;
+    }
+
+    .icon-info-div{
+        justify-content: space-around !important;
+    }
+}
+
+@media (width <= 992px){
+    .contact-flex-div{
+        flex-direction: column !important;
+        gap: 40px;
+    }
+
+    .contact-section img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-info{
+        gap: 20px;
+    }
+}
+
+@media (width <= 1100px) and (width > 992px) {
+    .contact-section img {
+        width: 315px;
+    }
+}
+
+
+
+
 .about-section , .contact-section{
     background-color: #000;
     color: white;
@@ -136,6 +186,9 @@ main{
 .about-section p , .contact-section p{
     font-size: var(--text2);
 }
+
+
+/* /  contact section  / */
 
 .contact-flex-div{
     display: flex;
@@ -171,7 +224,47 @@ main{
 }
 
 
+/* /  products section  / */
 
+
+@media (width <= 1350px) {
+    .card-img{
+        width: 20rem;
+    }
+}
+
+@media (width <= 1100px) {
+    .card-img {
+        width: 15rem;
+    }
+}
+
+@media (width <= 992px){
+    .products{
+        grid-template-areas: 'myArea myArea' !important;
+        justify-content: space-around !important;
+    }
+
+    .card-img{
+        width: 20rem;
+    }
+}
+
+@media (width <= 768px){
+    .card-img{
+        width: 15rem;
+    }
+}
+
+@media (width <= 768px){
+    .products{
+        grid-template-areas: 'myArea' !important;
+    }
+
+    .card-img{
+        width: 20rem;
+    }
+}
 
 .products-section{
     display: none;
@@ -242,9 +335,21 @@ fieldset p{
     padding: 1rem;
 }
 
+.card-img{
+    /*  */
+}
+
+.card-txts{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
 .product-price{
     font-size: var(--text2);
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 
 
