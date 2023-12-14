@@ -238,7 +238,6 @@ function show_filter_box(){
 }
 
 function filterByPrice(){
-    // let products
     if(radio_btn1.checked){
         products = bubble_sort_products(products, "low-to-high")
     }
