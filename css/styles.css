@@ -9,6 +9,130 @@ body{
     margin: 3rem 5%;
 }
 
+
+
+@media (width <= 1350px) {
+    /* /  products section  / */
+    .card-img{
+        width: 20rem;
+    }
+}
+
+@media (width <= 1100px) {
+    /* /  products section  / */
+    .card-img {
+        width: 15rem;
+    }
+}
+
+@media (width <= 1100px) and (width > 992px) {
+    .contact-section img {
+        width: 315px;
+    }
+}
+
+@media (width <= 992px){
+    /* /  home section  / */
+    .info-section{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .info-article{
+        max-width: unset !important;
+    }
+
+
+    /* /  about section and contact section  / */
+    .contact-flex-div{
+        flex-direction: column !important;
+        gap: 40px;
+    }
+
+    .contact-section img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-info{
+        gap: 20px;
+    }
+
+    /* /  products section  / */
+    .products{
+        grid-template-areas: 'myArea myArea' !important;
+        justify-content: space-around !important;
+    }
+
+    .card-img{
+        width: 20rem;
+    }
+}
+
+@media (width <= 768px){
+    .card-img{
+        width: 15rem;
+    }
+}
+
+@media (width <= 600px) {
+    :root{
+        --text1: 2rem;
+        --text2: 1rem;
+        --text3: 1rem;
+    }
+    
+    nav ul{
+        overflow: overlay;
+    }
+    
+    h2 {
+        font-size: var(--text1) !important;
+    }
+
+    .promotion-section p {
+        line-height: 1.3;
+        font-weight: unset !important;
+    }
+
+
+    /* /  about section and contact section  / */
+    .about-section p , .contact-section p {
+        list-style: 1.3;
+    }
+
+    .contact-section p {
+        padding: 0 !important;
+    }
+
+    .icon-info-div{
+        justify-content: space-around !important;
+    }
+
+    /* /  products section  / */
+    .checkboxes ,.radio-btns{
+        flex-direction: column !important;
+    }
+
+    .products{
+        grid-template-areas: 'myArea' !important;
+    }
+
+    .card-img{
+        width: 20rem;
+    }
+
+    /* /  footer  / */
+    footer img {
+        width: 100% !important;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+
 header img{
     display: block;
     margin: auto;
@@ -56,19 +180,6 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-
-
-/* /  home section  / */
-@media (width <= 992px){
-    .info-section{
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .info-article{
-        max-width: unset !important;
-    }
 }
 
 .promotion-section{
@@ -135,43 +246,6 @@ main{
     object-fit: cover;
 }
 
-
-/* /  about section and contact section  / */
-@media (width <= 600px){
-    .contact-section p {
-        padding: 0 !important;
-    }
-
-    .icon-info-div{
-        justify-content: space-around !important;
-    }
-}
-
-@media (width <= 992px){
-    .contact-flex-div{
-        flex-direction: column !important;
-        gap: 40px;
-    }
-
-    .contact-section img{
-        width: 100%;
-        height: 100%;
-    }
-
-    .contact-info{
-        gap: 20px;
-    }
-}
-
-@media (width <= 1100px) and (width > 992px) {
-    .contact-section img {
-        width: 315px;
-    }
-}
-
-
-
-
 .about-section , .contact-section{
     background-color: #000;
     color: white;
@@ -189,7 +263,6 @@ main{
 
 
 /* /  contact section  / */
-
 .contact-flex-div{
     display: flex;
     flex-direction: row;
@@ -221,49 +294,6 @@ main{
 
 .contact-section .icon {
     padding-left: 1rem
-}
-
-
-/* /  products section  / */
-
-
-@media (width <= 1350px) {
-    .card-img{
-        width: 20rem;
-    }
-}
-
-@media (width <= 1100px) {
-    .card-img {
-        width: 15rem;
-    }
-}
-
-@media (width <= 992px){
-    .products{
-        grid-template-areas: 'myArea myArea' !important;
-        justify-content: space-around !important;
-    }
-
-    .card-img{
-        width: 20rem;
-    }
-}
-
-@media (width <= 768px){
-    .card-img{
-        width: 15rem;
-    }
-}
-
-@media (width <= 768px){
-    .products{
-        grid-template-areas: 'myArea' !important;
-    }
-
-    .card-img{
-        width: 20rem;
-    }
 }
 
 .products-section{
@@ -335,10 +365,6 @@ fieldset p{
     padding: 1rem;
 }
 
-.card-img{
-    /*  */
-}
-
 .card-txts{
     display: flex;
     gap: 20px;
@@ -350,8 +376,6 @@ fieldset p{
 .product-price{
     font-size: var(--text2);
 }
-
-
 
 footer{
     display: flex;
