@@ -139,18 +139,14 @@ check_box1.addEventListener('click', filterByCategory)
 check_box2.addEventListener('click', filterByCategory)
 check_box3.addEventListener('click', filterByCategory)
 
+
+
 // const myAtropos = Atropos({
 //     el: '.my-atropos',
 //     activeOffset: 40,
-//     shadow: false,
 //     highlight: false
 // });
-// const myAtropos2 = Atropos({
-//     el: '.my-atropos2',
-//     activeOffset: 40,
-//     shadow: false,
-//     highlight: false
-// });
+
 
 
 // ** functions
